@@ -216,7 +216,7 @@ router.post("/search/:name", async (req, res) => {
 
         const contactNameInfo = await Usercontact.find({ userid: userData._id, name: name })
         console.log(contactNameInfo);
-        
+
         res.status(200).json({
             data: contactNameInfo
         })
